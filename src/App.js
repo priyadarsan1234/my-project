@@ -4,20 +4,18 @@ import React, { useState } from "react";
 import Product from "./Component/Product"
 
 function App() {
-  // Define state variables to store User-Id and Password
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
   const handleLoginClick = () => {
     if (userId === 'priya' && password === '1234') {
-      setIsLoggedIn(true); // Set isLoggedIn to true if login is successful
+      setIsLoggedIn(true);
     }
   };
 
   return (
     <div className='flex flex-col m-8 items-center'>
-      {/* Conditional rendering based on isLoggedIn state */}
       {isLoggedIn ? (
         <Product />
       ) : (
